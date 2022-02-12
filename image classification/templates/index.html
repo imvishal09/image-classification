@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Webapp</title>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    </head>
+
+    <body>
+        <h1 style = "text-align:center;">IMAGE PREDICTION</h1>
+        <div class="text-center">
+        <form class="p-3 text center" action="/", method="post" enctype="multipart/form-data">
+            <input class="from-control" type="file" name = 'imagefile'>
+            <input class="btn btn-success" type ="submit" value="Predict">
+        </form>
+        </div>
+
+        {% if prediction %}
+            <p style="text-align:center;">image is <kbd>{{prediction}}</kbd></p>
+        {% endif %}
+
+    </body>
+</html>
+
