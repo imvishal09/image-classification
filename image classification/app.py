@@ -23,9 +23,9 @@ def index():
     
 @app.route('/', methods=['POST'])
 def predict():
-    #saving input images in a folder
+    # saving input images in a folder
     imagefile = request.files['imagefile']
-    image_path = "./images/" + imagefile.filename
+    image_path = "./images/" + imagefile.filename # give your path where you saving the images 
     imagefile.save(image_path)
 
     # load image, resize image, make into an array and reshape
